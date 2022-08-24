@@ -171,12 +171,12 @@ def start_date(start):
 
     # Create a dictionary from the query results
     temp_data = []
-    for date, tMin, tMax, tAVG in tobs_results:
+    for date, tAvg, tMin, tMax in tobs_results:
         tobs_dict = {}
         # tobs_dict['date'] = date
+        tobs_dict['TAVG'] = tAvg
         tobs_dict['TMIN'] = tMin
         tobs_dict['TMAX'] = tMax
-        tobs_dict['TAVG'] = tAVG
         temp_data.append(tobs_dict)
     
     # Jsonify
@@ -199,12 +199,12 @@ def start_end_date(start, end):
 
     # Create a dictionary from the query results
     temp_data = []
-    for date, tMin, tMax, tAVG in tobs_results:
+    for date, tAvg, tMin, tMax in tobs_results:
         tobs_dict = {}
         # tobs_dict['date'] = date
+        tobs_dict['TAVG'] = tAvg
         tobs_dict['TMIN'] = tMin
         tobs_dict['TMAX'] = tMax
-        tobs_dict['TAVG'] = tAVG
         temp_data.append(tobs_dict)
     
     # Jsonify
